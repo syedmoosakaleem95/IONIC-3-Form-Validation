@@ -1,0 +1,89 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+<form [formGroup]="formgroup">
+  <ion-list>
+    <ion-item>
+      <ion-label>
+        FirstName
+      </ion-label>
+      <ion-input type="text" formControlName="firstname"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="firstname.hasError('required') && firstname.touched">
+      <p> *FirstName is required</p>
+    </ion-item>
+    <ion-item>
+        <ion-label>
+          LastName
+        </ion-label>
+        <ion-input type="text" formControlName="lastname"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="lastname.hasError('required') && lastname.touched">
+        <p> *LastName is required</p>
+      </ion-item>
+  </ion-list>
+
+  <button clear ion-button>Submit</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- <form [formGroup]="formdata">
+  <ion-list>
+    <ion-item>
+      <ion-label>FirstName</ion-label>
+      <ion-input type="text" formControlName="firstname"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="firstname.hasError('required') && firstname.touched" class="invalid">
+      <p>* firstname is required!</p>
+    </ion-item>
+    <ion-item>
+        <ion-label>LastName</ion-label>
+        <ion-input type="text" formControlName="lastname"></ion-input>
+    </ion-item>
+    <ion-item *ngIf="lastname.hasError('required') && lastname.touched" class="invalid">
+      <p>* lastname is required!</p>
+    </ion-item>
+  
+  </ion-list>
+  <button type="submit" ion-button clear>Done!</button>
+</form> -->
+  
+</ion-content>
